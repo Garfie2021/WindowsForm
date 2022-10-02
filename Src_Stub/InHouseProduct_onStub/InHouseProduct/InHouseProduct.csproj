@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\InHouseProduct\InHouseProduct\Form1.cs" Link="Form1.cs" />
+    <Compile Include="..\..\InHouseProduct\InHouseProduct\Form1.Designer.cs" Link="Form1.Designer.cs" />
+    <Compile Include="..\..\InHouseProduct\InHouseProduct\Program.cs" Link="Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\InHouseProduct\InHouseProduct\Form1.resx" Link="Form1.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ThirdPartyProducts_Strub\ThirdPartyProducts.csproj" />
+  </ItemGroup>
+
+</Project>
