@@ -8,9 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="ThirdPartyProducts">
-      <HintPath>..\ClassLibrary_ThirdPartyProductsCapsule\ThirdPartyProductsLib\ThirdPartyProducts.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\ThirdPartyProducts_Strub\ThirdPartyProducts.csproj" />
   </ItemGroup>
 
 </Project>

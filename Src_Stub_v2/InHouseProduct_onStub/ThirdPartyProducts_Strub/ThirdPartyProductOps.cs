@@ -13,7 +13,7 @@ namespace ThirdPartyProducts
         {
             get
             {
-                Debug.WriteLine("Call : " + typeof(ThirdPartyProductOps).Name + "." + MethodBase.GetCurrentMethod().Name);
+                Debug.WriteLine("Call : " + typeof(ThirdPartyProductOps).FullName + "." + MethodBase.GetCurrentMethod().Name);
 
                 Thread.Sleep(1000);
 
@@ -23,38 +23,38 @@ namespace ThirdPartyProducts
 
         public static ReturnCode Startup()
         {
-            Debug.WriteLine("Call : " + typeof(ThirdPartyProductOps).Name + "." + MethodBase.GetCurrentMethod().Name);
+            Debug.WriteLine("Call : " + typeof(ThirdPartyProductOps).FullName + "." + MethodBase.GetCurrentMethod().Name);
 
             Thread.Sleep(1000);
 
-            return ReturnCode.Success;
+            return StubSettingFile.GetErrorCode(typeof(ThirdPartyProductOps).FullName, MethodBase.GetCurrentMethod().Name);
         }
 
         public static ReturnCode Shutdown()
         {
-            Debug.WriteLine("Call : " + typeof(ThirdPartyProductOps).Name + "." + MethodBase.GetCurrentMethod().Name);
+            Debug.WriteLine("Call : " + typeof(ThirdPartyProductOps).FullName + "." + MethodBase.GetCurrentMethod().Name);
 
             Thread.Sleep(1000);
 
-            return ReturnCode.Success;
+            return StubSettingFile.GetErrorCode(typeof(ThirdPartyProductOps).FullName, MethodBase.GetCurrentMethod().Name);
         }
 
         public static ReturnCode Transaction1()
         {
-            Debug.WriteLine("Call : " + typeof(ThirdPartyProductOps).Name + "." + MethodBase.GetCurrentMethod().Name);
+            Debug.WriteLine("Call : " + typeof(ThirdPartyProductOps).FullName + "." + MethodBase.GetCurrentMethod().Name);
 
             Thread.Sleep(1000);
 
-            return ReturnCode.Success;
+            return StubSettingFile.GetErrorCode(typeof(ThirdPartyProductOps).FullName, MethodBase.GetCurrentMethod().Name);
         }
 
         public static ReturnCode Transaction2()
         {
-            Debug.WriteLine("Call : " + typeof(ThirdPartyProductOps).Name + "." + MethodBase.GetCurrentMethod().Name);
+            Debug.WriteLine("Call : " + typeof(ThirdPartyProductOps).FullName + "." + MethodBase.GetCurrentMethod().Name);
 
             Thread.Sleep(1000);
 
-            return ReturnCode.Success;
+            return StubSettingFile.GetErrorCode(typeof(ThirdPartyProductOps).FullName, MethodBase.GetCurrentMethod().Name);
         }
 
     }
