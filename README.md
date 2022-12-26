@@ -1,4 +1,13 @@
-## BlazorServer5.0/Src_Static/
+## WindowsForm/Src_Static/
+Even if a method is declared static, variables declared within the method are not shared among multiple threads, and static member variables of the class are shared.
+
+Variables declared inside a static method are not shared between multiple threads, just like variables declared inside a while loop cannot be used outside of the variable scope specification.
+
+From this, we can see that it is safe to use static methods that are executed in stack memory in multithreaded applications.
+
+[Source code explanation page](https://blog.unikktle.com/c%e3%83%9e%e3%83%ab%e3%83%81%e3%82%b9%e3%83%ac%e3%83%83%e3%83%89%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8bstatic%e5%a4%89%e6%95%b0%e3%81%ae%e3%82%b9%e3%82%b3%e3%83%bc%e3%83%97/)
+
+---
 
 ## WindowsForm/Src_Stub/
 How to make a stub.
