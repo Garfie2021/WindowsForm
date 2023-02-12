@@ -39,3 +39,13 @@ In the development of Windows Forms apps in Visual Studio 2019 + .NET 5.0, the B
 
 ---
 
+## WindowsForm/Src_TaskRun_Invoke/
+
+Dealing with "Invalid cross-thread operation: The control was accessed from a thread other than the thread in which the control was created." Exception (Windows Forms)
+
+In a Windows Forms app, if you operate a form control on the main thread from another thread, such as Task.Run(), an error message "System.InvalidOperationException: 'Invalid cross-thread operation: The control was created from a thread other than the thread in which the control was created Accessed.'” Exception occurs, but it is resolved by passing Invoke().
+
+[Source code explanation page](https://blog.unikktle.com/%e3%80%8c%e6%9c%89%e5%8a%b9%e3%81%a7%e3%81%af%e3%81%aa%e3%81%84%e3%82%b9%e3%83%ac%e3%83%83%e3%83%89%e9%96%93%e3%81%ae%e6%93%8d%e4%bd%9c-%e3%82%b3%e3%83%b3%e3%83%88%e3%83%ad%e3%83%bc%e3%83%ab%e3%81%8c/)
+
+---
+
