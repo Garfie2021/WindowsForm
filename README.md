@@ -1,3 +1,22 @@
+## WindowsForm/Src_MagicOnion/
+gRPC communication realized with .NET 6.0 and MagicOnion (Windows Forms)
+
+I created a sample that performs gRPC communication processing from a .NET 6.0 Windows Forms application using the MagicOnion NuGet package.
+
+When migrating a client-server system implemented with .Net Framework to .NET 6.0, you can easily migrate to a client-server system using gRPC communication by using the MagicOnion Nuget package.
+
+It is recommended to migrate a client-server system implemented with .Net Framework + WCF to HTTP/2 gRPC communication rather than migrate to .NET 6.0 + WCF Core and continue communicating with the old HTTP protocol.
+
+With MagicOnion, you can easily implement gRPC communication in a client/server system.
+When developing a client-server system with .NET, it seems that implementing gRPC communication with MagicOnion will become the mainstream for communication processing.
+
+The MagicOnion project site on GitHub has a MagicOnion development repository, installation instructions, etc., and is easy to understand.
+
+[YouTube](https://youtu.be/lA2U4IHPYdE)
+[Source code explanation page](https://blog.unikktle.com/net-6-0%e3%81%a8magiconion%e3%81%a7%e5%ae%9f%e7%8f%be%e3%81%99%e3%82%8bgrpc%e9%80%9a%e4%bf%a1%ef%bc%88windows%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%ef%bc%89/)
+
+---
+
 ## WindowsForm/Src_Static/
 Even if a method is declared static, variables declared within the method are not shared among multiple threads, and static member variables of the class are shared.
 
@@ -5,6 +24,7 @@ Variables declared inside a static method are not shared between multiple thread
 
 From this, we can see that it is safe to use static methods that are executed in stack memory in multithreaded applications.
 
+[YouTube]()
 [Source code explanation page](https://blog.unikktle.com/c%e3%83%9e%e3%83%ab%e3%83%81%e3%82%b9%e3%83%ac%e3%83%83%e3%83%89%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8bstatic%e5%a4%89%e6%95%b0%e3%81%ae%e3%82%b9%e3%82%b3%e3%83%bc%e3%83%97/)
 
 ---
@@ -23,6 +43,8 @@ There are too many people who can't tell the difference between a mock and a stu
 
 I made it based on .Net Core, but it will be the same implementation in .Net Framework.
 
+[YouTube](https://youtu.be/NLudWJL09aI)
+[YouTube](https://youtu.be/DOx0tYWG63M)
 [Source code explanation page](https://blog.unikktle.com/%e3%82%b9%e3%82%bf%e3%83%96%ef%bc%88stub%ef%bc%89%e3%81%ae%e4%bd%9c%e3%82%8a%e6%96%b9/)
 
 ---
@@ -35,6 +57,7 @@ From Visual Studio 2022 + .NET 6.0, it is now possible to develop Windows Forms 
 Visual Studio 2022 is not quite stable, and recently, I have finally implemented a Windows Forms app with Visual Studio 2022 + .NET 6.0, and am no longer annoyed by strange movements.
 In the development of Windows Forms apps in Visual Studio 2019 + .NET 5.0, the Binding of DataGridView was incomplete and unusable, but in Visual sStudio 2022 + .NET 6.0, Visual Studio 2019 + .Net Framwork 4.8. About 1 environment, you can implement a Windows Forms application crisply.
 
+[YouTube](https://youtu.be/xtd0bcDob_E)
 [Source code explanation page](https://blog.unikktle.com/%e3%82%b9%e3%82%bf%e3%83%96%ef%bc%88stub%ef%bc%89%e3%81%ae%e4%bd%9c%e3%82%8a%e6%96%b9-v2/)
 
 ---
@@ -45,6 +68,7 @@ Dealing with "Invalid cross-thread operation: The control was accessed from a th
 
 In a Windows Forms app, if you operate a form control on the main thread from another thread, such as Task.Run(), an error message "System.InvalidOperationException: 'Invalid cross-thread operation: The control was created from a thread other than the thread in which the control was created Accessed.'” Exception occurs, but it is resolved by passing Invoke().
 
+[YouTube](https://youtu.be/o6C6V8yALFc)
 [Source code explanation page](https://blog.unikktle.com/%e3%80%8c%e6%9c%89%e5%8a%b9%e3%81%a7%e3%81%af%e3%81%aa%e3%81%84%e3%82%b9%e3%83%ac%e3%83%83%e3%83%89%e9%96%93%e3%81%ae%e6%93%8d%e4%bd%9c-%e3%82%b3%e3%83%b3%e3%83%88%e3%83%ad%e3%83%bc%e3%83%ab%e3%81%8c/)
 
 ---
