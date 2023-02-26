@@ -17,6 +17,26 @@ The MagicOnion project site on GitHub has a MagicOnion development repository, i
 
 ---
 
+## WindowsForm/Src_MagicOnion_v2/
+
+I created a sample that performs gRPC communication processing from a .NET 6.0 Windows Forms application using the MagicOnion NuGet package.
+I added a pattern that uses a data class to the sample created last time.
+When communicating data classes with MagicOnion, serialization/deserialization using MessagePack is essential.
+
+When migrating a client-server system implemented with .Net Framework to .NET 6.0, you can easily migrate to a client-server system using gRPC communication by using the MagicOnion Nuget package.
+
+It is recommended to migrate a client-server system implemented with .Net Framework + WCF to HTTP/2 gRPC communication rather than migrate to .NET 6.0 + WCF Core and continue communicating with the old HTTP protocol.
+
+With MagicOnion, you can easily implement gRPC communication in a client/server system.
+When developing a client-server system with .NET, it seems that implementing gRPC communication with MagicOnion will become the mainstream for communication processing.
+
+The MagicOnion project site on GitHub has a MagicOnion development repository, installation instructions, etc., and is easy to understand.
+
+[YouTube](https://youtu.be/iqGtoW0jokY)
+[Source code explanation page](https://blog.unikktle.com/net-6-0%e3%81%a8magiconion%e3%81%a7%e5%ae%9f%e7%8f%be%e3%81%99%e3%82%8bgrpc%e9%80%9a%e4%bf%a1%ef%bc%88windows%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%ef%bc%89v2/)
+
+---
+
 ## WindowsForm/Src_Static/
 Even if a method is declared static, variables declared within the method are not shared among multiple threads, and static member variables of the class are shared.
 
