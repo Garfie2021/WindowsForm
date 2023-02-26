@@ -8,4 +8,21 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Model\**" />
+    <Compile Remove="Shared\**" />
+    <EmbeddedResource Remove="Model\**" />
+    <EmbeddedResource Remove="Shared\**" />
+    <None Remove="Model\**" />
+    <None Remove="Shared\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MagicOnion.Client" Version="5.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ClassLibrary1\ClassLibrary1\ClassLibrary1.csproj" />
+  </ItemGroup>
+
 </Project>
