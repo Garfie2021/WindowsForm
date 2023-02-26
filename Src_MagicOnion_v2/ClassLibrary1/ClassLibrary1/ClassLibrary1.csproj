@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MagicOnion" Version="5.1.2" />
+  </ItemGroup>
+
 </Project>
