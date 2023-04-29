@@ -1,5 +1,6 @@
 ## WindowsForm/Src_MagicOnion/
-gRPC communication realized with .NET 6.0 and MagicOnion (Windows Forms)
+
+gRPC communication realized with .NET 6.0 and MagicOnion (Windows Forms).
 
 I created a sample that performs gRPC communication processing from a .NET 6.0 Windows Forms application using the MagicOnion NuGet package.
 
@@ -19,6 +20,8 @@ The MagicOnion project site on GitHub has a MagicOnion development repository, i
 
 ## WindowsForm/Src_MagicOnion_v2/
 
+gRPC communication (Windows Forms) v2 realized with .NET 6.0 and MagicOnion.
+
 I created a sample that performs gRPC communication processing from a .NET 6.0 Windows Forms application using the MagicOnion NuGet package.
 I added a pattern that uses a data class to the sample created last time.
 When communicating data classes with MagicOnion, serialization/deserialization using MessagePack is essential.
@@ -34,6 +37,22 @@ The MagicOnion project site on GitHub has a MagicOnion development repository, i
 
 [YouTube](https://youtu.be/iqGtoW0jokY)
 [Source code explanation page](https://blog.unikktle.com/net-6-0%e3%81%a8magiconion%e3%81%a7%e5%ae%9f%e7%8f%be%e3%81%99%e3%82%8bgrpc%e9%80%9a%e4%bf%a1%ef%bc%88windows%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%ef%bc%89v2/)
+
+---
+
+## WindowsForm/Src_MagicOnion_v3/
+
+gRPC communication (Windows Forms) v3 realized with .NET 6.0 and MagicOnion.
+
+Using the MagicOnion NuGet package to perform gRPC communication processing from a .NET 6.0 Windows Forms application. There was a problem that it did not pass to the server side.
+The sample created this time solves those problems by setting the Resolver when starting the client-side and server-side apps.
+
+When using the ColorFormatter/ColorResolver inside MessagePack, even if the value is passed from the server to the client, the value is not passed from the client to the server.
+
+The process to set Resolver should be added on both server side and client side.
+
+[YouTube](https://youtu.be/aIHyY4QlOHU)
+[Source code explanation page](https://blog.unikktle.com/net-6-0%e3%81%a8magiconion%e3%81%a7%e5%ae%9f%e7%8f%be%e3%81%99%e3%82%8bgrpc%e9%80%9a%e4%bf%a1%ef%bc%88windows%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%ef%bc%89v3/)
 
 ---
 
