@@ -1,4 +1,5 @@
 ﻿using MessagePack;
+using System.Drawing;
 
 namespace ClassLibrary1.Model
 {
@@ -10,5 +11,8 @@ namespace ClassLibrary1.Model
 
         [Key("StringA")] 
         public string StringA { get; set; }
+
+        [Key("ColorA")]
+        public Color ColorA { get; set; }
     }
 }
