@@ -2,6 +2,7 @@
 using MagicOnion;
 using ClassLibrary1.Interface;
 using ClassLibrary1.Model;
+using System.Drawing;
 
 namespace WebApplication1.Services
 {
@@ -22,6 +23,7 @@ namespace WebApplication1.Services
             {
                 IntA = modelClassA1.IntA + modelClassA2.IntA,
                 StringA = modelClassA1.StringA + modelClassA2.StringA,
+                ColorA = Color.FromArgb(11, 22, 33)
             };
 
             return ModelClassA;
