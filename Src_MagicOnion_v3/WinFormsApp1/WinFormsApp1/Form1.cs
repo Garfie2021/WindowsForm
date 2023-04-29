@@ -28,11 +28,13 @@ namespace WinFormsApp1
             {
                 IntA = 1,
                 StringA = "aa"
+                ,ColorA = Color.FromArgb(10, 20, 30)
             };
             var modelClassA2 = new ModelClassA()
             {
                 IntA = 2,
                 StringA = "bb"
+                ,ColorA = Color.FromArgb(10, 20, 30)
             };
             var resultModelClassA = (await client.Sum2Async(modelClassA1, modelClassA2));
             textBox1.Text = resultModelClassA.IntA.ToString() + " " + resultModelClassA.StringA;
