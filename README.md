@@ -1,3 +1,12 @@
+## WindowsForm/Src_FileToHexadecimal/
+
+I created a tool that reads a file and displays the contents in hexadecimal.
+
+[YouTube](https://youtu.be/eHT8rxkJ1G8)
+[Source code explanation page](https://blog.unikktle.com/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e5%86%85%e5%ae%b9%e3%82%9216%e9%80%b2%e6%95%b0%e3%81%a7%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e3%83%84%e3%83%bc%e3%83%ab/)
+
+---
+
 ## WindowsForm/Src_MagicOnion/
 
 gRPC communication realized with .NET 6.0 and MagicOnion (Windows Forms).
@@ -109,6 +118,15 @@ In a Windows Forms app, if you operate a form control on the main thread from an
 
 [YouTube](https://youtu.be/o6C6V8yALFc)
 [Source code explanation page](https://blog.unikktle.com/%e3%80%8c%e6%9c%89%e5%8a%b9%e3%81%a7%e3%81%af%e3%81%aa%e3%81%84%e3%82%b9%e3%83%ac%e3%83%83%e3%83%89%e9%96%93%e3%81%ae%e6%93%8d%e4%bd%9c-%e3%82%b3%e3%83%b3%e3%83%88%e3%83%ad%e3%83%bc%e3%83%ab%e3%81%8c/)
+
+---
+
+## WindowsForm/Src_WindowsEventLogIssue/
+
+I wrote a tool that publishes Windows event logs.
+
+[YouTube](https://youtu.be/jSWIYQwwtfY)
+[Source code explanation page](https://blog.unikktle.com/windows%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%83%ad%e3%82%b0%e3%82%92%e7%99%ba%e8%a1%8c%e3%81%99%e3%82%8b%e3%83%84%e3%83%bc%e3%83%ab/)
 
 ---
 
