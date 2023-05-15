@@ -65,6 +65,18 @@ The process to set Resolver should be added on both server side and client side.
 
 ---
 
+## WindowsForm/Src_MagicOnion_v4/
+
+gRPC communication realized with .NET 6.0 and MagicOnion (Windows Forms) v4.
+
+From a .NET 6.0 Windows Forms application, using the MagicOnion NuGet package, gRPC communication processing Added processing to Lz4 compression of serialized MessagePack communication data to the sample created last time.
+
+Just add WithCompression(MessagePackCompression.Lz4Block) to ContractlessStandardResolver.Options on both client and server.
+
+[Source code explanation page](https://blog.unikktle.com/net-6-0%e3%81%a8magiconion%e3%81%a7%e5%ae%9f%e7%8f%be%e3%81%99%e3%82%8bgrpc%e9%80%9a%e4%bf%a1%ef%bc%88windows%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%ef%bc%89v4/)
+
+---
+
 ## WindowsForm/Src_Static/
 Even if a method is declared static, variables declared within the method are not shared among multiple threads, and static member variables of the class are shared.
 
