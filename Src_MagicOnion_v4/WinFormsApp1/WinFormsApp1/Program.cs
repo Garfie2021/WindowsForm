@@ -19,7 +19,8 @@ namespace WinFormsApp1
                 ColorResolver.Instance,
                 ContractlessStandardResolver.Instance
             );
-            var options = ContractlessStandardResolver.Options.WithResolver(Resolver);
+            var options = ContractlessStandardResolver.Options.WithResolver(Resolver)
+                .WithCompression(MessagePackCompression.Lz4Block);
             MessagePackSerializer.DefaultOptions = options;
 
             // To customize application configuration such as set high DPI settings or default font,

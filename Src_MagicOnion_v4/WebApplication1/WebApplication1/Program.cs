@@ -11,7 +11,8 @@ var Resolver = CompositeResolver.Create(
     ColorResolver.Instance,
     ContractlessStandardResolver.Instance
 );
-var options = ContractlessStandardResolver.Options.WithResolver(Resolver);
+var options = ContractlessStandardResolver.Options.WithResolver(Resolver)
+    .WithCompression(MessagePackCompression.Lz4Block);
 MessagePackSerializer.DefaultOptions = options;
 
 var builder = WebApplication.CreateBuilder(args);
