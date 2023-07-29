@@ -6,13 +6,13 @@ namespace ClassLibrary1.Model
     [MessagePackObject]
     public class ModelClassA
     {
-        [Key("IntA")] 
+        [Key(0)] 
         public int IntA { get; set; }
 
-        [Key("StringA")] 
+        [Key(1)] 
         public string StringA { get; set; }
 
-        [Key("ColorA")]
+        [Key(2)]
         public Color ColorA { get; set; }
     }
 }
