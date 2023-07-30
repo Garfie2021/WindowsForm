@@ -77,6 +77,31 @@ Just add WithCompression(MessagePackCompression.Lz4Block) to ContractlessStandar
 
 ---
 
+## WindowsForm/Src_MagicOnion_v5/
+
+gRPC Communication (Windows Forms) v5 with .NET 6.0 and MagicOnion
+
+Added a setting to cancel the maximum 30MB communication limit of the WEB server.
+The added settings remove the maximum 30MB communication limit (changed to 1024MB maximum) when VisualStudio is debug-executed, hosted on a Kestrel server, and hosted on an IIS server.
+
+"Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: 'Request body too large. The max request body size is 30000000 bytes.'" will result in an error.
+
+If all items are not checked in "Debug > Window > Exception Settings" in Visual Studio, "Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: 'Request body too large. The max request body size is 30000000 bytes.'" error, but "Grpc.Core.RpcException: 'Status(StatusCode=”Unknown”, Detail=”Exception was thrown by handler.”)'" error in MagicOnion communication processing I got addicted to it.
+
+[Source code explanation page](https://blog.unikktle.com/net-6-0%e3%81%a8magiconion%e3%81%a7%e5%ae%9f%e7%8f%be%e3%81%99%e3%82%8bgrpc%e9%80%9a%e4%bf%a1%ef%bc%88windows%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%ef%bc%89v5/)
+
+---
+
+## WindowsForm/Src_MagicOnion_v6/
+
+gRPC communication (Windows Forms) v6 realized with .NET 6.0 and MagicOnion
+
+Modified the Key of the model class that communicates with MagicOnion from a string to a numerical index. As a result, the amount of data and memory used when MagicOnion communicates can be reduced to about half.
+
+[Source code explanation page](https://blog.unikktle.com/net-6-0%e3%81%a8magiconion%e3%81%a7%e5%ae%9f%e7%8f%be%e3%81%99%e3%82%8bgrpc%e9%80%9a%e4%bf%a1%ef%bc%88windows%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%ef%bc%89v6/)
+
+---
+
 ## WindowsForm/Src_Static/
 Even if a method is declared static, variables declared within the method are not shared among multiple threads, and static member variables of the class are shared.
 
