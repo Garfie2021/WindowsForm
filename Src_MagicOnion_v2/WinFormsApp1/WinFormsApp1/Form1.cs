@@ -2,6 +2,7 @@ using ClassLibrary1.Interface;
 using ClassLibrary1.Model;
 using Grpc.Net.Client;
 using MagicOnion.Client;
+using MessagePack;
 
 namespace WinFormsApp1
 {
@@ -34,6 +35,9 @@ namespace WinFormsApp1
                 IntA = 2,
                 StringA = "bb"
             };
+
+            var length = MessagePackSerializer.Serialize(modelClassA1).Length;
+
             var resultModelClassA = (await client.Sum2Async(modelClassA1, modelClassA2));
             textBox1.Text = resultModelClassA.IntA.ToString() + " " + resultModelClassA.StringA;
         }
