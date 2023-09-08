@@ -7,6 +7,22 @@ I created a tool that reads a file and displays the contents in hexadecimal.
 
 ---
 
+## WindowsForm/Src_GcMultiRow/
+
+Grid development procedure for single row multi-column layout using GcMultiRow(GrapeCity.Win.MultiRow) for Windows Forms 11.2
+
+GcMultiRow created a grid screen sample with a single row and multiple rows layout that cannot be realized with the standard DataGridView of the Visual Studio Windows Forms application.
+Create a .NET 7.0 "Windows Forms App" project in Visual Studio 2022.
+Install GrapeCity.Win.MultiRow Nuget package.
+Click "GcMultiRow" in the toolbox and add his GcMultiRow to the form.
+A grid with a one-row, two-column layout is implemented when displayed on the screen.
+In the click event of GcMultiRow, when a button on GcMultiRow is clicked, the matrix position index value of the button and the value entered in the text box on the same line are displayed in a message box.
+
+[YouTube](https://youtu.be/3SO0wy_tBOs)
+[Source code explanation page](https://blog.unikktle.com/gcmultirowgrapecity-win-multirow-for-windows-forms-11-2-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f1%e8%a1%8c%e8%a4%87%e6%95%b0%e6%ae%b5%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%ae%e3%82%b0/)
+
+---
+
 ## WindowsForm/Src_MagicOnion/
 
 gRPC communication realized with .NET 6.0 and MagicOnion (Windows Forms).
