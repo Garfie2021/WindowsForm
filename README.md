@@ -12,6 +12,7 @@ I created a tool that reads a file and displays the contents in hexadecimal.
 Grid development procedure for single row multi-column layout using GcMultiRow(GrapeCity.Win.MultiRow) for Windows Forms 11.2
 
 GcMultiRow created a grid screen sample with a single row and multiple rows layout that cannot be realized with the standard DataGridView of the Visual Studio Windows Forms application.
+The checkbox column has one row and two columns, and the text box column and button column have one row and one column, arranged vertically.
 Create a .NET 7.0 "Windows Forms App" project in Visual Studio 2022.
 Install GrapeCity.Win.MultiRow Nuget package.
 Click "GcMultiRow" in the toolbox and add his GcMultiRow to the form.
