@@ -1,3 +1,52 @@
+## WindowsForm/Src_ActiveReports/SectionReportApplication1/
+
+GrapeCity ActiveReports for .NET 16.0J Section Report (SectionReport) development steps
+
+When developing an app to run on Windows, you currently use Visual Studio 2022 to implement it in a .Net Core project (.NET 7.0), but in a .Net Core project, the ActiveReports report designer is Since it cannot be used, it is necessary to create a separate .Net Framework project for the report designer. I have summarized the steps involved.
+
+Visual Studio project creation
+Create a .Net Framework project for editing report designer
+A project where only the design of the section report is changed.
+This project is not eligible for release as a .Net Core app.
+
+Select “ActiveReports 16.0J Section Report Application”.
+
+Create a .Net Core project for release
+Project for release of section report application.
+This time, select "Windows Forms App" from the .Net Core family.
+
+Install ActiveReports Nuget package
+Add the section report to your .Net Core project and install the Nuget packages related to ActiveReports.
+
+caveat
+ActiveReports is not fully compatible with .Net Core projects, so the NU1701 warning will be output, but you can ignore it as it can be executed without any problems.
+
+Section report creation
+Edit section report
+"ActiveReports 16.0J Section Report Application" has one section report file (SectionReport1.cs) created by default, so we will use it this time.
+
+When debugging a report designer editing project
+By debugging the report designer editing project, you can confirm that any value is displayed in the TextBox field.
+
+Add section report to .Net Core projects
+Add the section report created on the report designer editing project side to the .Net Core project side as a link.
+By adding it as a link, the entity of the section report will not be divided into multiple projects, and the contents edited in the report designer editing project can be immediately reflected in the .Net Core project.
+
+When opening a section report on the .Net Core project side
+When you open a section report on the .Net Core project side, the report designer is not displayed, but the code-behind source code is displayed.
+
+Create a report viewer for a .Net Core project
+Open a Windows form on the .Net Core project side and drag and paste "ActiveReports 16 > GrapeCity.ActiveReports.Viewer.Win.Viewer" from the toolbar to the Windows form.
+
+When debugging a .Net Core project
+Similar to the report designer editing project, you can also debug section reports in .Net Core projects.
+This will be used as a release project.
+
+[YouTube](https://youtu.be/-7_c86laC64?si=rg4yL8Mw_2WkYKAd)
+[Source code explanation page](https://blog.unikktle.com/grapecity-activereports-for-net-16-0j-%e3%81%ae%e3%82%bb%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88sectionreport-%e9%96%8b%e7%99%ba%e6%89%8b%e9%a0%86/)
+
+---
+
 ## WindowsForm/Src_FileToHexadecimal/
 
 I created a tool that reads a file and displays the contents in hexadecimal.
