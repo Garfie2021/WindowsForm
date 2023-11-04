@@ -42,8 +42,52 @@ When debugging a .Net Core project
 Similar to the report designer editing project, you can also debug section reports in .Net Core projects.
 This will be used as a release project.
 
-[YouTube](https://youtu.be/-7_c86laC64?si=rg4yL8Mw_2WkYKAd)
+[YouTube](https://youtu.be/-7_c86laC64)
 [Source code explanation page](https://blog.unikktle.com/grapecity-activereports-for-net-16-0j-%e3%81%ae%e3%82%bb%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88sectionreport-%e9%96%8b%e7%99%ba%e6%89%8b%e9%a0%86/)
+
+---
+
+## WindowsForm/Src_ActiveReports/SectionReportApplication2/
+
+Use the ActiveReports section report created in a .Net Framework project in a .Net Core project.In the sample created last time, the values entered from the Windows Form screen on the .Net Core side will be displayed in the section report. It has been improved.
+
+.Net Framework project for editing report designer
+Explanation of source code changes.
+
+SectionReportApplication1/DataModel1.cs
+- Added DataModel1 data class to simplify processing when displaying dynamic values in the textbox of section reports.
+
+SectionReportApplication1/Form1.cs
+・Delete unnecessary using.
+- Since a dynamic value is now displayed in the Textbox of the section report, change the DataModel1 data class to be passed to the section report from the Windows form.
+
+SectionReportApplication1/SectionReport1.cs
+Change the value displayed in the TextBox of the section report from a fixed string to the Text1 member variable of the DataModel1 data class received from the constructor parameter.
+
+SectionReportApplication1/SectionReportApplication1.csproj
+-Upgraded the .Net Framework version from v4.7.2 to the latest v4.8.
+- Create a new source file for the DataModel1 data class on the ".Net Framework project for report designer editing" side.
+*For the DataModel1 data class, the same source file is used in the ".Net Framework project for report designer editing" and the ".Net Core project for release."
+
+.Net Core project for release
+Explanation of source code changes.
+
+/WinFormsApp1/Form2.cs　Form2.Designer.cs　Form2.resx
+-Create a new input screen.
+-Clicking the "button1" button launches the report viewer screen where the entered values are displayed.
+-The input value is retained in the DataModel1 data class and the DataModel1 data class is passed to the report viewer screen.
+
+/WinFormsApp1/Form1.cs
+- On the report viewer screen, change the DataModel1 data class received from the constructor parameter to be passed to the section report.
+
+/WinFormsApp1/Program.cs
+- The flow of calling the report viewer screen from the input screen has been changed, so the screen displayed when the application starts is changed from the report viewer screen to the input screen.
+
+/WinFormsApp1/WinFormsApp1.csproj
+- The DataModel1 data class created on the ".Net Framework project for report designer editing" side is added as a link and incorporated as a reference on the ".Net Core project for release" side.
+
+[YouTube](https://youtu.be/zlHOK1KWLRg)
+[Source code explanation page](https://blog.unikktle.com/grapecity-activereports-for-net-16-0j-%e3%81%ae%e3%82%bb%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88sectionreport-%e9%96%8b%e7%99%ba%e6%89%8b%e9%a0%86-v2/)
 
 ---
 
