@@ -91,6 +91,79 @@ Explanation of source code changes.
 
 ---
 
+## WindowsForm/Src_ActiveReports/SectionReportApplication3/
+
+The sample I created last time was improved so that the values entered from the Windows form screen on the .Net Core side are displayed in the section report, and I changed it to a general form that prints on A4 paper.
+
+### .Net Framework project for editing report designer
+Explanation of source code changes
+
+/SectionReportApplication1/SectionReportApplication1.csproj
+Change DataModel1 data class to ReportDataModel data class.
+
+/SectionReportApplication1/DataModel1.cs /SectionReportApplication1/ReportDataModel.cs
+Change DataModel1 data class to ReportDataModel data class.
+Adding data items corresponding to the items added to the section report.
+
+/SectionReportApplication1/Form1.cs
+Change DataModel1 data class to ReportDataModel data class.
+
+/SectionReportApplication1/SectionReport1.Designer.cs /SectionReportApplication1/SectionReport1.resx
+The report layout has been changed to a general form consisting of a header and details.
+
+pageHeder is an area that is output on all pages.
+This time, we have provided "Report No" and "Date" columns.
+
+groupHeader1 is an area that is output only on the first page by setting "RepeatStyle=None" in the property.
+This time, we have provided "Title" and "Description" columns.
+
+groupHeader2 is an area that is output on all pages by setting "RepeatStyle=All" in the property.
+This time, the column title of the detailed data output to the detail area is set as a fixed character string.
+
+detail is a table area that is output on all pages.
+This time, the detailed data is divided into three columns.
+
+pageFooter is an area that is output on all pages.
+This time, the current page number and total page number are displayed.
+
+/SectionReportApplication1/SectionReport1.cs
+Associate the items added to the section report with the ReportDataModel data class.
+
+
+### .Net Core project for release
+Explanation of source code changes.
+
+/WinFormsApp1/WinFormsApp1.csproj
+Change the DataModel1 data class added as a link to the ReportDataModel data class.
+
+/WinFormsApp1/Form1.Designer.cs
+The size of the report viewer screen has been expanded to make it easier to view A4 reports.
+
+/WinFormsApp1/Form1.cs
+Change DataModel1 data class to ReportDataModel data class.
+
+/WinFormsApp1/Form2.Designer.cs
+As the number of items in the report has increased, we have also added items to the input screen.
+It is easy to understand which items on the input screen correspond to which items in the section report by watching the YouTube video.
+
+/WinFormsApp1/Form2.cs
+Associate the items added to the input screen with the ReportDataModel data class.
+
+
+### supplement
+Paper size settings
+To set the paper size for printing a report, such as A4 or B5, select "Printer Settings" under "Report Settings" from the "Property Settings Dialog" that is displayed in the properties when you click the gray area of the report in the report designer. > Paper size”.
+This time I set it to the general "A4".
+
+Add groupHeader
+A groupHeader can be added by right-clicking on the background in the report designer and selecting Insert > Group Header/Footer.
+
+
+[YouTube](https://youtu.be/GpqsDrjXrkw)
+[Source code explanation page](https://blog.unikktle.com/grapecity-activereports-for-net-16-0j-%e3%81%ae%e3%82%bb%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88sectionreport-%e9%96%8b%e7%99%ba%e6%89%8b%e9%a0%86-v3/)
+
+---
+
 ## WindowsForm/Src_FileToHexadecimal/
 
 I created a tool that reads a file and displays the contents in hexadecimal.
