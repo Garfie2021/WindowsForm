@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\SectionReportApplication1\DataModel1.cs" Link="DataModel1.cs" />
+    <Compile Include="..\SectionReportApplication1\SectionReport1.cs" Link="SectionReport1.cs" />
+    <Compile Include="..\SectionReportApplication1\SectionReport1.Designer.cs" Link="SectionReport1.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\SectionReportApplication1\SectionReport1.resx" Link="SectionReport1.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Gcef.Data.DataEngine" Version="3.1.0" />
+    <PackageReference Include="Gcef.Data.ExpressionInfo" Version="3.1.0" />
+    <PackageReference Include="Gcef.Data.VBFunctionLib" Version="3.1.0" />
+    <PackageReference Include="GrapeCity.ActiveReports.Chart.ja" Version="16.1.2" />
+    <PackageReference Include="GrapeCity.ActiveReports.Chart.Win.ja" Version="16.1.2" />
+    <PackageReference Include="GrapeCity.ActiveReports.Core.DataProviders" Version="2.1.0" />
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Document" Version="3.4.1" />
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Document.Drawing.Gc" Version="3.4.1" />
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Document.Drawing.Gdi" Version="3.4.1" />
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Drawing.Gc" Version="3.3.2" />
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi" Version="3.3.2" />
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Export.Image.Page" Version="3.3.2" />
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Export.Tiff.Section" Version="3.4.1" />
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Rdl" Version="3.3.2" />
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Rendering" Version="3.3.2" />
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Scripting" Version="3.3.2" />
+    <PackageReference Include="GrapeCity.ActiveReports.Design.Win.ja" Version="16.1.0" />
+    <PackageReference Include="GrapeCity.ActiveReports.Document.ja" Version="16.1.0" />
+    <PackageReference Include="GrapeCity.ActiveReports.Export.Image.ja" Version="16.1.0" />
+    <PackageReference Include="GrapeCity.ActiveReports.ja" Version="16.1.0" />
+    <PackageReference Include="GrapeCity.ActiveReports.Serializer.VS2022.ja" Version="16.1.0" />
+    <PackageReference Include="GrapeCity.ActiveReports.Viewer.Common.ja" Version="16.1.0" />
+    <PackageReference Include="GrapeCity.ActiveReports.Viewer.Win.ja" Version="16.1.0" />
+    <PackageReference Include="Grapecity.DataVisualization.Chart" Version="0.4.77" />
+    <PackageReference Include="GrapeCity.Documents.DX.Windows" Version="5.2.0.802" />
+    <PackageReference Include="GrapeCity.Documents.Imaging" Version="5.2.0.802" />
+    <PackageReference Include="GrapeCity.Documents.Imaging.Windows" Version="5.2.0.802" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="5.0.0" />
+    <PackageReference Include="System.Buffers" Version="4.5.1" />
+    <PackageReference Include="System.Memory" Version="4.5.4" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="5.0.1" />
+    <PackageReference Include="System.Text.Json" Version="5.0.2" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+
+</Project>
