@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\SectionReportApplication1\DataModel1.cs" Link="DataModel1.cs" />
+    <Compile Include="..\SectionReportApplication1\ReportDataModel.cs" Link="ReportDataModel.cs" />
     <Compile Include="..\SectionReportApplication1\SectionReport1.cs" Link="SectionReport1.cs" />
     <Compile Include="..\SectionReportApplication1\SectionReport1.Designer.cs" Link="SectionReport1.Designer.cs" />
   </ItemGroup>

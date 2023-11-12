@@ -33,6 +33,7 @@
             // 
             // viewer1
             // 
+            viewer1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             viewer1.CurrentPage = 0;
             viewer1.Location = new Point(1, 0);
             viewer1.Name = "viewer1";
@@ -67,16 +68,17 @@
             viewer1.Sidebar.TocPanel.Text = "見出しマップラベル";
             viewer1.Sidebar.TocPanel.Width = 200;
             viewer1.Sidebar.Width = 200;
-            viewer1.Size = new Size(824, 441);
+            viewer1.Size = new Size(894, 895);
             viewer1.TabIndex = 0;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(826, 443);
+            ClientSize = new Size(896, 897);
             Controls.Add(viewer1);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);

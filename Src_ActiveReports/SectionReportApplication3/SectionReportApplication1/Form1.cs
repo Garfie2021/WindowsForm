@@ -12,12 +12,12 @@ namespace SectionReportApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var DataModel1 = new DataModel1
+            var reportDataModel = new ReportDataModel
             {
                 Text1 = "test"
             };
 
-            viewer1.LoadDocument(new SectionReport1(DataModel1));
+            viewer1.LoadDocument(new SectionReport1(reportDataModel));
         }
     }
 }
