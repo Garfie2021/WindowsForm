@@ -164,6 +164,23 @@ A groupHeader can be added by right-clicking on the background in the report des
 
 ---
 
+## WindowsForm/Src_ActiveReports/SectionReportApplication4/
+
+The sample I created last time displayed the section report on the Viewer screen, but I created a sample that outputs a PDF file without displaying the Viewer screen.
+
+### .Net Core project for release
+
+Install GrapeCity.ActiveReports.Export.Pdf.ja Nuget package.
+Added "PDF" button to output PDF file.
+
+Added an event handler for the "PDF" button that outputs a PDF file.
+Reference the GrapeCity.ActiveReports.Export.Pdf.ja Nuget package using GrapeCity.ActiveReports.Export.Pdf.Section; and in the button2_Click event handler, create section report data using the same process as the sample created last time, and create a new Create a section report instance with SectionReport1(reportDataModel);, build it with sectionReport1.Run();, and output the PDF file with export.Export(sectionReport1.Document, @”C:\temp\sample4.pdf”); I am.
+
+[YouTube](https://youtu.be/Cwba68ayuo8)
+[Source code explanation page](https://blog.unikktle.com/grapecity-activereports-for-net-16-0j-%e3%81%ae%e3%82%bb%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88sectionreport-%e9%96%8b%e7%99%ba%e6%89%8b%e9%a0%86-v4/)
+
+---
+
 ## WindowsForm/Src_FileToHexadecimal/
 
 I created a tool that reads a file and displays the contents in hexadecimal.
