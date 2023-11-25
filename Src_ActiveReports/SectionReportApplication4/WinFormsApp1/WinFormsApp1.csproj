@@ -38,6 +38,7 @@
     <PackageReference Include="GrapeCity.ActiveReports.Design.Win.ja" Version="16.1.0" />
     <PackageReference Include="GrapeCity.ActiveReports.Document.ja" Version="16.1.0" />
     <PackageReference Include="GrapeCity.ActiveReports.Export.Image.ja" Version="16.1.0" />
+    <PackageReference Include="GrapeCity.ActiveReports.Export.Pdf.ja" Version="16.1.0" />
     <PackageReference Include="GrapeCity.ActiveReports.ja" Version="16.1.0" />
     <PackageReference Include="GrapeCity.ActiveReports.Serializer.VS2022.ja" Version="16.1.0" />
     <PackageReference Include="GrapeCity.ActiveReports.Viewer.Common.ja" Version="16.1.0" />

@@ -47,6 +47,7 @@
             textDetail1 = new TextBox();
             label1 = new Label();
             textNumberOfLines = new TextBox();
+            button2 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -64,7 +65,7 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 1;
-            button1.Text = "button1";
+            button1.Text = "Viewer";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -224,11 +225,22 @@
             textNumberOfLines.Size = new Size(62, 23);
             textNumberOfLines.TabIndex = 0;
             // 
+            // button2
+            // 
+            button2.Location = new Point(97, 390);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 4;
+            button2.Text = "PDF";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(623, 426);
+            Controls.Add(button2);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(button1);
@@ -264,5 +276,6 @@
         private TextBox textDetail3;
         private Label label7;
         private TextBox textDetail2;
+        private Button button2;
     }
 }

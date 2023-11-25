@@ -1,4 +1,5 @@
-﻿using SectionReportApplication1;
+﻿using GrapeCity.ActiveReports.Export.Pdf.Section;
+using SectionReportApplication1;
 
 namespace WinFormsApp1
 {
@@ -46,6 +47,35 @@ namespace WinFormsApp1
 
             var form1 = new Form1(reportDataModel);
             form1.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var reportDataModel = new ReportDataModel
+            {
+                ReportNo = textReportNo.Text,
+                Date = textDate.Text,
+                Title = textTitle.Text,
+                Description = textDescription.Text,
+            };
+
+            var max = int.Parse(textNumberOfLines.Text);
+            for (var cnt = 0; cnt < max; cnt++)
+            {
+                reportDataModel.ReportDetailList.Add(new ReportDataModelDetail1
+                {
+                    Test1 = textDetail1.Text + $" cnt={cnt}",
+                    Test2 = textDetail2.Text + $" cnt={cnt}",
+                    Test3 = textDetail3.Text + $" cnt={cnt}",
+                });
+            }
+            var sectionReport1 = new SectionReport1(reportDataModel);
+            sectionReport1.Run();
+
+            using (var export = new PdfExport())
+            {
+                export.Export(sectionReport1.Document, @"C:\temp\sample4.pdf");
+            }
         }
     }
 }
