@@ -190,7 +190,7 @@ I created a tool that reads a file and displays the contents in hexadecimal.
 
 ---
 
-## WindowsForm/Src_GcMultiRow/
+## WindowsForm/Src_GcMultiRow/WinFormsApp1
 
 Grid development procedure for single row multi-column layout using GcMultiRow(GrapeCity.Win.MultiRow) for Windows Forms 11.2
 
@@ -204,6 +204,26 @@ In the click event of GcMultiRow, when a button on GcMultiRow is clicked, the ma
 
 [YouTube](https://youtu.be/3SO0wy_tBOs)
 [Source code explanation page](https://blog.unikktle.com/gcmultirowgrapecity-win-multirow-for-windows-forms-11-2-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f1%e8%a1%8c%e8%a4%87%e6%95%b0%e6%ae%b5%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%ae%e3%82%b0/)
+
+---
+
+## WindowsForm/Src_GcMultiRow/WinFormsApp2
+
+I added the ability to filter by header row to the sample I created last time.
+
+The behavior when selecting "Sort in ascending order, Sort in descending order, Select all, Blank cells, Non-blank cells" and the list of deduplicated cell values and filters listed in the filter options are as follows. It is a standard feature of GcMultiRow, so no implementation is required.
+
+Added data class to bind with GcMultiRow control.
+
+Set the option to display the options "Sort Ascending, Sort Descending, Select All, Blank Cells, Non-Blank Cells" and the option to automatically list the values displayed/entered in cells in the filter to true. Add a filter to the 2nd column HeaderCell (TextBox Culoumn).
+
+Bind an instance of a data class.
+GcMultiRow's filter will not work unless you bind the data class.
+
+Use DataField to set which item in the data class is linked to which column in the GcMultiRow control.
+
+[YouTube](https://youtu.be/Dy6bC0hHHOM)
+[Source code explanation page](https://blog.unikktle.com/gcmultirowgrapecity-win-multirow-for-windows-forms-11-2-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f1%e8%a1%8c%e8%a4%87%e6%95%b0%e6%ae%b5%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%ae%e3%82%b0-2/)
 
 ---
 
