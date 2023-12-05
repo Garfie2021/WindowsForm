@@ -1,12 +1,13 @@
 using GrapeCity.Win.MultiRow;
+using System.ComponentModel;
 
 namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
-        private const int GcMultiRow1_CuloumnIndex_0 = 0;
-        private const int GcMultiRow1_CuloumnIndex_1 = 1;
-        private const int GcMultiRow1_CuloumnIndex_2 = 2;
+        private const int GcMultiRow1_ColumnIndex_0 = 0;
+        private const int GcMultiRow1_ColumnIndex_1 = 1;
+        private const int GcMultiRow1_ColumnIndex_2 = 2;
 
         public Form1()
         {
@@ -47,7 +48,8 @@ namespace WinFormsApp1
                         TextAlign = MultiRowContentAlignment.MiddleCenter,
                         Multiline = MultiRowTriState.False,
                         Font = this.Font,
-                    }
+                    },
+                    DropDownList = new HeaderDropDownList(1, true, true)
                 },
                 new ColumnHeaderCell()
                 {
@@ -75,13 +77,15 @@ namespace WinFormsApp1
                 {
                     Location = new Point(0, 0),
                     Size = new Size(200, 40),
-                    Value = false
+                    Value = false,
+                    DataField = nameof(MyDataModel.CheckBoxValue)
                 },
                 new TextBoxCell
                 {
                     Location = new Point(200, 0),
                     Size = new Size(200, 20),
-                    Value = "Default Value"
+                    Value = "Default Value",
+                    DataField = nameof(MyDataModel.TextBoxValue)
                 },
                 new ButtonCell
                 {
@@ -90,20 +94,31 @@ namespace WinFormsApp1
                     Value = "Button"
                 }
             });
-            #endregion
 
             GcMultiRow1.Template = template;
+            #endregion
+
+            #region Data Binding
+            //初期値のサンプルデータ
+            var data = new BindingList<MyDataModel>
+            {
+                new MyDataModel { CheckBoxValue = true, TextBoxValue = "Text data 1" },
+                new MyDataModel { CheckBoxValue = false, TextBoxValue = "Text data 2" }
+            };
+
+            GcMultiRow1.DataSource = data;
+            #endregion
         }
 
         private void GcMultiRow1_CellClick(object sender, CellEventArgs e)
         {
             try
             {
-                if (e.CellIndex != GcMultiRow1_CuloumnIndex_2)
+                if (e.CellIndex != GcMultiRow1_ColumnIndex_2)
                     return;  //クリック処理対象外のセルがクリックされた場合はスキップ
 
                 //以降はボタンクリック時の処理
-                MessageBox.Show($"Button row no={e.RowIndex}   Button column no={e.CellIndex}   TextBox cell value={GcMultiRow1[e.RowIndex, GcMultiRow1_CuloumnIndex_1].Value}");
+                MessageBox.Show($"Button row no={e.RowIndex}   Button column no={e.CellIndex}   TextBox cell value={GcMultiRow1[e.RowIndex, GcMultiRow1_ColumnIndex_1].Value}");
             }
             catch (Exception ex)
             {
