@@ -378,6 +378,17 @@ In a Windows Forms app, if you operate a form control on the main thread from an
 
 ---
 
+## WindowsForm/Src_VisualStudioWorkFolderDelete/
+
+Tool to delete Visual Studio bin/obj folder all at once
+
+If you save or back up multiple Visual Studio solution folders for a large project, the bin/obj folder will exceed 100GB and take up space on the disk, but there are too many Visual Studio solution folders. It takes a lot of time to open each Visual Studio solution in Visual Studio and clean it, or to search and delete the bin/obj folder from Windows Explorer. I created a tool to delete all obj folders at once.
+
+[YouTube](https://youtu.be/gB1RRXQpr3I)
+[Source code explanation page](https://blog.unikktle.com/visual-studio%e3%81%ae-bin-obj%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%82%92%e7%ba%8f%e3%82%81%e3%81%a6%e5%89%8a%e9%99%a4%e3%81%99%e3%82%8b%e3%83%84%e3%83%bc%e3%83%ab/)
+
+---
+
 ## WindowsForm/Src_WindowsEventLogIssue/
 
 I wrote a tool that publishes Windows event logs.
