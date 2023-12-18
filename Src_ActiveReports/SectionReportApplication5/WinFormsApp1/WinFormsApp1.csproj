@@ -12,10 +12,16 @@
     <Compile Include="..\SectionReportApplication1\ReportDataModel.cs" Link="ReportDataModel.cs" />
     <Compile Include="..\SectionReportApplication1\SectionReport1.cs" Link="SectionReport1.cs" />
     <Compile Include="..\SectionReportApplication1\SectionReport1.Designer.cs" Link="SectionReport1.Designer.cs" />
+    <Compile Include="..\SectionReportApplication1\SectionReportBackCover.cs" Link="SectionReportBackCover.cs" />
+    <Compile Include="..\SectionReportApplication1\SectionReportBackCover.Designer.cs" Link="SectionReportBackCover.Designer.cs" />
+    <Compile Include="..\SectionReportApplication1\SectionReportFrontCover.cs" Link="SectionReportFrontCover.cs" />
+    <Compile Include="..\SectionReportApplication1\SectionReportFrontCover.Designer.cs" Link="SectionReportFrontCover.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="..\SectionReportApplication1\SectionReport1.resx" Link="SectionReport1.resx" />
+    <EmbeddedResource Include="..\SectionReportApplication1\SectionReportBackCover.resx" Link="SectionReportBackCover.resx" />
+    <EmbeddedResource Include="..\SectionReportApplication1\SectionReportFrontCover.resx" Link="SectionReportFrontCover.resx" />
   </ItemGroup>
 
   <ItemGroup>

@@ -14,7 +14,7 @@ namespace SectionReportApplication1
         {
             var reportDataModel = new ReportDataModel
             {
-                Text1 = "test"
+                Title = "test"
             };
 
             viewer1.LoadDocument(new SectionReport1(reportDataModel));

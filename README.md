@@ -1,3 +1,17 @@
+## WindowsForm/Src_ActiveDirectory/WinFormsApp1/
+
+A tool that connects to ActiveDirectory and lists ActiveDirectory properties.
+
+I previously created a tool that connects to ActiveDirectory in a Windows Forms app and lists ActiveDirectory properties.
+
+When you change the connection destination and click the "Search" button, ActiveDirectory property names and values will be listed in the "Results" column.
+- Change (domain) to the domain you belong to, such as ○○.co.jp.
+- Change (user account name) and (user account password) to the account used when logging into the Windows OS.
+
+[Source code explanation page](https://blog.unikktle.com/activedirectory%e3%81%b8%e6%8e%a5%e7%b6%9a%e3%81%97-activedirectory%e3%81%ae%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3%e3%82%92%e3%83%aa%e3%82%b9%e3%83%88%e3%82%a2%e3%83%83%e3%83%97%e3%81%99/)
+
+---
+
 ## WindowsForm/Src_ActiveReports/SectionReportApplication1/
 
 GrapeCity ActiveReports for .NET 16.0J Section Report (SectionReport) development steps
@@ -178,6 +192,41 @@ Reference the GrapeCity.ActiveReports.Export.Pdf.ja Nuget package using GrapeCit
 
 [YouTube](https://youtu.be/Cwba68ayuo8)
 [Source code explanation page](https://blog.unikktle.com/grapecity-activereports-for-net-16-0j-%e3%81%ae%e3%82%bb%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88sectionreport-%e9%96%8b%e7%99%ba%e6%89%8b%e9%a0%86-v4/)
+
+---
+
+## WindowsForm/Src_ActiveReports/SectionReportApplication5/
+
+GrapeCity ActiveReports for .NET 16.0J Section Report (SectionReport) Development Procedure v5
+
+In the sample created last time, data was bound to one section report file (SectionReport1.cs), displayed on the Viewer screen, and outputted as a PDF file, but data was bound to multiple section report format files and one I have created a sample that displays as one report on the Viewer screen and outputs it as a PDF file.
+
+Create new section report files for the cover section and summary section.
+Add the section report files for the cover section and summary section newly created on the ".Net Framework project for report designer editing" side as links.
+Added processing to the section report viewer to combine and display section report files for the cover section, details section, and summary section.
+
+[YouTube](https://youtu.be/mIqr7IJmiFw)
+[Source code explanation page](https://blog.unikktle.com/grapecity-activereports-for-net-16-0j-%e3%81%ae%e3%82%bb%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88sectionreport-%e9%96%8b%e7%99%ba%e6%89%8b%e9%a0%86-v5/)
+
+---
+
+## WindowsForm/Src_AirQualityMetrics/
+
+A simple processing dialog implemented in a Windows Forms app.
+
+The Windows Form app implemented in Japan's District Ranking with Good Air 2023 has a simple implementation of the processing dialog, and can be used as a reference if you want to quickly implement the processing dialog.
+
+The processing on the processing dialog side simply displays the value passed to the StatusText property in the txtStatus text box.
+
+If you exclude detailed processing of file operations/DB operations from the click event processing of the "Import CSV file" button and only display confirmation/completion message boxes, task execution, and display/hide processing dialogs, the following will occur.
+- Changed btnCsvFileImport_Click button click event handler to an asynchronous method by adding async.
+- File import/DB processing is implemented in Task.Run() and executed in a separate thread.
+- After starting a task in another thread, display the processing dialog using ProcessingDialog.ShowDialog(), and keep the processing dialog displayed until the await task is finished.
+- Each time the number of imported files increases, the progress text is passed to the processingDialog.StatusText property through processingDialog.Invoke().
+- By executing processingDialog.Close() through processingDialog.Invoke() during the final processing in Task.Run(), the ProcessingDialog processing dialog is closed when the file import/DB processing is finished.
+
+[YouTube](https://youtu.be/gh1q7Hn2scU)
+[Source code explanation page](https://blog.unikktle.com/windows%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%e3%82%a2%e3%83%97%e3%83%aa%e3%81%a7%e5%ae%9f%e8%a3%85%e3%81%99%e3%82%8b%e3%82%b7%e3%83%b3%e3%83%97%e3%83%ab%e3%81%aa%e5%87%a6%e7%90%86%e4%b8%ad%e3%83%80/)
 
 ---
 

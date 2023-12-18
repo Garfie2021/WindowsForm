@@ -165,8 +165,14 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="SectionReportFrontCover.resx">
+      <DependentUpon>SectionReportFrontCover.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SectionReport1.resx">
       <DependentUpon>SectionReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReportBackCover.resx">
+      <DependentUpon>SectionReportBackCover.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +185,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SectionReportBackCover.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReportBackCover.Designer.cs">
+      <DependentUpon>SectionReportBackCover.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -203,6 +215,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SectionReportFrontCover.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReportFrontCover.Designer.cs">
+      <DependentUpon>SectionReportFrontCover.cs</DependentUpon>
     </Compile>
     <Compile Include="SectionReport1.cs">
       <SubType>Component</SubType>

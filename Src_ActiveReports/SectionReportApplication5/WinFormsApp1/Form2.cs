@@ -69,13 +69,25 @@ namespace WinFormsApp1
                     Test3 = textDetail3.Text + $" cnt={cnt}",
                 });
             }
+
+            var sectionReportFrontCover = new SectionReportFrontCover();
+            sectionReportFrontCover.Run();
+
             var sectionReport1 = new SectionReport1(reportDataModel);
             sectionReport1.Run();
 
+            var sectionReportBackCover = new SectionReportBackCover(reportDataModel);
+            sectionReportBackCover.Run();
+
+            sectionReportFrontCover.Document.Pages.AddRange((GrapeCity.ActiveReports.Document.Section.PagesCollection)sectionReport1.Document.Pages.Clone());
+            sectionReportFrontCover.Document.Pages.AddRange((GrapeCity.ActiveReports.Document.Section.PagesCollection)sectionReportBackCover.Document.Pages.Clone());
+
             using (var export = new PdfExport())
             {
-                export.Export(sectionReport1.Document, @"C:\temp\sample4.pdf");
+                export.Export(sectionReportFrontCover.Document, @"C:\temp\sample4.pdf");
             }
+
+            MessageBox.Show("PDFファイルを作成しました。", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
