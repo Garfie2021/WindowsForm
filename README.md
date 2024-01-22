@@ -378,8 +378,31 @@ Variables declared inside a static method are not shared between multiple thread
 
 From this, we can see that it is safe to use static methods that are executed in stack memory in multithreaded applications.
 
-[YouTube]()
 [Source code explanation page](https://blog.unikktle.com/c%e3%83%9e%e3%83%ab%e3%83%81%e3%82%b9%e3%83%ac%e3%83%83%e3%83%89%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8bstatic%e5%a4%89%e6%95%b0%e3%81%ae%e3%82%b9%e3%82%b3%e3%83%bc%e3%83%97/)
+
+
+---
+
+## WindowsForm/Src_Oracle/OracleConnectTest/
+
+I created a test tool to connect ODAC/OleDB/ODAC from C# to Oracle.
+It also supports his ODAC/OleDB/ODAC connections to Oracle RAC.
+
+[YouTube](https://youtu.be/6vtKT_fV5Tk)
+[Source code explanation page](https://blog.unikktle.com/c%e3%81%8b%e3%82%89oracle%e3%81%b8odac-oledb-odac%e6%8e%a5%e7%b6%9a%e3%81%99%e3%82%8b%e3%83%86%e3%82%b9%e3%83%88%e3%83%84%e3%83%bc%e3%83%ab/)
+
+
+---
+
+## WindowsForm/Src_SQLite/WindowsFormsApplication1/
+
+Increase security by password-protecting SQLite database files.
+To create a password-protected SQLite database file, use the PupSQLite tool, which supports SQLite passwords.
+I created a C# sample that operates on a password-protected SQLite database file.
+
+[YouTube](https://youtu.be/9PXMkH6jztQ)
+[Source code explanation page](https://blog.unikktle.com/sqlite%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e3%83%91%e3%82%b9%e3%83%af%e3%83%bc%e3%83%89%e6%9c%89%e3%82%8a%e3%81%ab%e3%81%97/)
+
 
 ---
 
