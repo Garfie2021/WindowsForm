@@ -230,6 +230,16 @@ If you exclude detailed processing of file operations/DB operations from the cli
 
 ---
 
+## WindowsForm/Src_File/FileRead_SpecificLinesOnly/
+
+A tool to extract specific lines from text files.
+When analyzing logs, I created this tool because it would be helpful to have a tool that can quickly extract specific lines from a text file without overwriting the contents of the file.
+
+[YouTube](https://youtu.be/Ax1agj8llHs)
+[Source code explanation page](https://blog.unikktle.com/%e3%83%86%e3%82%ad%e3%82%b9%e3%83%88%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%8b%e3%82%89%e7%89%b9%e5%ae%9a%e3%81%ae%e8%a1%8c%e3%82%92%e6%8a%bd%e5%87%ba%e3%81%99%e3%82%8b%e3%81%99%e3%82%8b%e3%83%84/)
+
+---
+
 ## WindowsForm/Src_FileToHexadecimal/
 
 I created a tool that reads a file and displays the contents in hexadecimal.
