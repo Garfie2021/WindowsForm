@@ -393,7 +393,7 @@ From this, we can see that it is safe to use static methods that are executed in
 
 ---
 
-## WindowsForm/Src_Oracle/OracleConnectTest/
+## WindowsForm/Src_Oracle/
 
 I created a test tool to connect ODAC/OleDB/ODAC from C# to Oracle.
 It also supports his ODAC/OleDB/ODAC connections to Oracle RAC.
@@ -404,7 +404,7 @@ It also supports his ODAC/OleDB/ODAC connections to Oracle RAC.
 
 ---
 
-## WindowsForm/Src_SQLite/WindowsFormsApplication1/
+## WindowsForm/Src_SQLite/
 
 Increase security by password-protecting SQLite database files.
 To create a password-protected SQLite database file, use the PupSQLite tool, which supports SQLite passwords.
@@ -413,6 +413,15 @@ I created a C# sample that operates on a password-protected SQLite database file
 [YouTube](https://youtu.be/9PXMkH6jztQ)
 [Source code explanation page](https://blog.unikktle.com/sqlite%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e3%83%91%e3%82%b9%e3%83%af%e3%83%bc%e3%83%89%e6%9c%89%e3%82%8a%e3%81%ab%e3%81%97/)
 
+---
+
+## WindowsForm/Src_SQLite_Dapper_NET8/
+
+CRUD processing implemented with .NET 8.0 + Windows Forms app + Dapper + SQLite.
+I created a sample of CRUD processing for a SQLite database using the Dapper + SQLite NuGet package in a .NET 8.0 Windows Forms app. Dapper is the mainstream for OR mapping.
+
+[YouTube](https://youtu.be/CG6ZnMjHuJs)
+[Source code explanation page](https://blog.unikktle.com/net-8-0-windows%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%e3%82%a2%e3%83%97%e3%83%aa-dapper-sqlite-%e3%81%a7%e5%ae%9f%e8%a3%85%e3%81%99%e3%82%8bcrud%e5%87%a6%e7%90%86/)
 
 ---
 
