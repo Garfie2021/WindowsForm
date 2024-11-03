@@ -425,6 +425,16 @@ I created a sample of CRUD processing for a SQLite database using the Dapper + S
 
 ---
 
+## WindowsForm/Src_SQLite_Dapper_NET8_CsvHelper/
+
+Implementing CSV file import using .NET 8.0 + Windows Forms app + CsvHelper + Dapper + SQLite.
+In the previous article "Implementing CRUD processing using .NET 8.0 + Windows Forms app + Dapper + SQLite", I added a function to import CSV files into a SQLite database using the CsvHelper NuGet package. CsvHelper is the mainstream for CSV file processing.
+
+[YouTube](https://youtu.be/yjQKPQGPlH4)
+[Source code explanation page](https://blog.unikktle.com/net-8-0-windows%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%e3%82%a2%e3%83%97%e3%83%aa-csvhelper-dapper-sqlite-%e3%81%a7%e5%ae%9f%e8%a3%85%e3%81%99%e3%82%8b-csv%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab/)
+
+---
+
 ## WindowsForm/Src_Stub/
 How to make a stub.
 When developing an application that operates a third-party product that costs tens of millions of yen or more, the work environment is limited, such as being able to connect to the third-party product only locally, and not being able to connect to the third-party product from the local PC where the development work is performed. , it often happens that the debugging process does not proceed as expected.
