@@ -32,6 +32,8 @@
             dataGridView1 = new DataGridView();
             Clm編集 = new DataGridViewButtonColumn();
             Clm削除 = new DataGridViewButtonColumn();
+            btnCSVファイルをインポート = new Button();
+            btn全データ削除 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -75,11 +77,33 @@
             Clm削除.UseColumnTextForButtonValue = true;
             Clm削除.Width = 50;
             // 
+            // btnCSVファイルをインポート
+            // 
+            btnCSVファイルをインポート.Location = new Point(140, 12);
+            btnCSVファイルをインポート.Name = "btnCSVファイルをインポート";
+            btnCSVファイルをインポート.Size = new Size(147, 23);
+            btnCSVファイルをインポート.TabIndex = 2;
+            btnCSVファイルをインポート.Text = "CSVファイルをインポート";
+            btnCSVファイルをインポート.UseVisualStyleBackColor = true;
+            btnCSVファイルをインポート.Click += btnCSVファイルをインポート_Click;
+            // 
+            // btn全データ削除
+            // 
+            btn全データ削除.Location = new Point(336, 12);
+            btn全データ削除.Name = "btn全データ削除";
+            btn全データ削除.Size = new Size(119, 23);
+            btn全データ削除.TabIndex = 3;
+            btn全データ削除.Text = "全データ削除";
+            btn全データ削除.UseVisualStyleBackColor = true;
+            btn全データ削除.Click += btn全データ削除_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btn全データ削除);
+            Controls.Add(btnCSVファイルをインポート);
             Controls.Add(dataGridView1);
             Controls.Add(btn追加);
             Name = "Form1";
@@ -95,5 +119,7 @@
         private DataGridView dataGridView1;
         private DataGridViewButtonColumn Clm編集;
         private DataGridViewButtonColumn Clm削除;
+        private Button btnCSVファイルをインポート;
+        private Button btn全データ削除;
     }
 }

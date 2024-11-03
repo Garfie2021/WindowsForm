@@ -1,5 +1,8 @@
+using CsvHelper.Configuration;
+using CsvHelper;
 using Maintenance.Model;
 using Maintenance.Sql;
+using System.Globalization;
 
 namespace WinFormsApp1
 {
@@ -32,6 +35,38 @@ namespace WinFormsApp1
                     form.ShowDialog(this);
                     Get政権();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnCSVファイルをインポート_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var dataList = LoadCsv(@"..\..\..\..\..\CSV\政権.csv");
+
+                Sql政権.InsertRange(dataList);
+                Get政権();
+
+                MessageBox.Show("完了");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn全データ削除_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Sql政権.DeleteAll();
+                Get政権();
+
+                MessageBox.Show("完了");
             }
             catch (Exception ex)
             {
@@ -81,6 +116,21 @@ namespace WinFormsApp1
             dataGridView1.Columns["Start"].Width = 100;
             dataGridView1.Columns["End"].Width = 100;
             dataGridView1.Columns["Name"].Width = 200;
+        }
+
+        public List<M政権> LoadCsv(string filePath)
+        {
+            using (var reader = new StreamReader(filePath))
+            using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                HasHeaderRecord = true,
+                HeaderValidated = null,
+                MissingFieldFound = null
+            }))
+            {
+                var records = csv.GetRecords<M政権>();
+                return new List<M政権>(records);
+            }
         }
 
     }

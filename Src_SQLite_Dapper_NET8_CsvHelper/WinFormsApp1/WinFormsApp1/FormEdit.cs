@@ -43,7 +43,7 @@ namespace WinFormsApp1
 
                 if (_Mê≠å†.Id == null)
                 {
-                    Sqlê≠å†.Add(_Mê≠å†);
+                    Sqlê≠å†.Insert(_Mê≠å†);
                 }
                 else
                 {

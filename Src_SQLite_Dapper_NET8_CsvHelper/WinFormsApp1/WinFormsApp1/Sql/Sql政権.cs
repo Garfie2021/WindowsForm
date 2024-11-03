@@ -29,7 +29,7 @@ namespace Maintenance.Sql
             }
         }
 
-        public static void Add(M政権 m政権)
+        public static void Insert(M政権 m政権)
         {
             using (var sqliteConnection = new SQLiteConnection(StaticData.ConnectionString))
             {
@@ -37,6 +37,17 @@ namespace Maintenance.Sql
 
                 sqliteConnection.Open();
                 sqliteConnection.Execute(query, m政権);
+            }
+        }
+
+        public static void InsertRange(List<M政権> m政権List)
+        {
+            using (var sqliteConnection = new SQLiteConnection(StaticData.ConnectionString))
+            {
+                const string query = "INSERT INTO 政権 (Start, End, Name) VALUES (@Start, @End, @Name)";
+
+                sqliteConnection.Open();
+                sqliteConnection.Execute(query, m政権List);
             }
         }
 
@@ -59,6 +70,17 @@ namespace Maintenance.Sql
 
                 sqliteConnection.Open();
                 sqliteConnection.Execute(query, m政権);
+            }
+        }
+
+        public static void DeleteAll()
+        {
+            using (var sqliteConnection = new SQLiteConnection(StaticData.ConnectionString))
+            {
+                const string query = "DELETE FROM 政権";
+
+                sqliteConnection.Open();
+                sqliteConnection.Execute(query);
             }
         }
 
