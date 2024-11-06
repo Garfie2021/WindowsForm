@@ -46,7 +46,7 @@ namespace WinFormsApp1
         {
             try
             {
-                var dataList = LoadCsv(@"..\..\..\..\..\CSV\政権.csv");
+                var dataList = LoadCsv(@"..\..\..\..\..\CSV\政権.tsv");
 
                 Sql政権.InsertRange(dataList);
                 Get政権();
@@ -120,12 +120,21 @@ namespace WinFormsApp1
 
         public List<M政権> LoadCsv(string filePath)
         {
+            // ファイル拡張子に応じた区切り文字を設定
+            var delimiter = Path.GetExtension(filePath).ToLower() switch
+            {
+                ".csv" => ",",
+                ".tsv" => "\t",
+                _ => throw new ArgumentException("サポートされていないファイル形式です。.csv と .tsv のみが許可されます。")
+            };
+
             using (var reader = new StreamReader(filePath))
             using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
             {
                 HasHeaderRecord = true,
                 HeaderValidated = null,
-                MissingFieldFound = null
+                MissingFieldFound = null,
+                Delimiter = delimiter
             }))
             {
                 var records = csv.GetRecords<M政権>();

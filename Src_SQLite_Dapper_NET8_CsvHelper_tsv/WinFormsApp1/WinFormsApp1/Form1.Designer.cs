@@ -83,7 +83,7 @@
             btnCSVファイルをインポート.Name = "btnCSVファイルをインポート";
             btnCSVファイルをインポート.Size = new Size(147, 23);
             btnCSVファイルをインポート.TabIndex = 2;
-            btnCSVファイルをインポート.Text = "CSVファイルをインポート";
+            btnCSVファイルをインポート.Text = "CSV/TSVファイルをインポート";
             btnCSVファイルをインポート.UseVisualStyleBackColor = true;
             btnCSVファイルをインポート.Click += btnCSVファイルをインポート_Click;
             // 
